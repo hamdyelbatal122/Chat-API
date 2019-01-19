@@ -75,25 +75,3 @@ if ($_SERVER['argv'][1] == '-i') {
     exit(0);
 }
 
-if ($_SERVER['argv'][1] == '-l') {
-    echo "\n[] Listen mode:\n";
-    while (true) {
-        $wa->pollMessage();
-        $data = $wa->getMessages();
-        if (!empty($data)) {
-            print_r($data);
-        }
-        sleep(1);
-    }
-    exit(0);
-}
-
-if ($_SERVER['argv'][1] == '-set') {
-    echo "\n[] Setting status:\n";
-    $wa->sendStatusUpdate($_SERVER['argv'][2]);
-    exit(0);
-}
-
-echo "\n[] Send message to $dst: $msg\n";
-$wa->sendMessage($dst, $msg);
-echo "\n";
