@@ -41,12 +41,4 @@ if (!$identityExists) {
     } catch (Exception $e) {
         echo $e->getMessage()."\n";
         exit(0);
-    }
-} else {
-    try {
-        $result = $w->checkCredentials();
-    } catch (Exception $e) {
-        echo $e->getMessage()."\n";
-        exit(0);
-    }
-}
+ 
