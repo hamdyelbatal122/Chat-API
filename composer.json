@@ -24,3 +24,15 @@
             "src/"
         ]
    
+ },
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "ext-gd" : "*",
+        "ext-mcrypt": "*",
+        "ext-openssl" : "*",
+        "ext-pdo" : "*",
+        "ext-sockets" : "*",
+        "ext-sqlite3" : "*"
+    }
+}
